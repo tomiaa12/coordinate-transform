@@ -1,0 +1,50 @@
+{
+  "name": "@tomiaa/coordinate-transform",
+  "version": "0.0.1",
+  "private": false,
+  "description": "百度，高德，腾讯，天地图，WSG84坐标经纬度互相转换",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./es/index.js",
+      "require": "./lib/index.js"
+    },
+    "./src": {
+      "import": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "vue-tsc --noEmit && vite build",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0 -n ./changelog.ts"
+  },
+  "keywords": [
+    "vue3",
+    "utils"
+  ],
+  "files": [
+    "es",
+    "lib"
+  ],
+  "author": "tomiaa",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/proj4": "^2.5.5",
+    "conventional-changelog-cli": "^5.0.0",
+    "ol": "^10.1.0",
+    "proj4": "^2.12.0",
+    "projzh": "^1.0.0",
+    "vite": "^5.4.2",
+    "vite-plugin-dts": "^4.0.3",
+    "vue-tsc": "^2.0.29"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomiaa12/utils.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tomiaa12/utils.js/issues"
+  },
+  "homepage": "https://github.com/tomiaa12/utils.js#readme"
+}
