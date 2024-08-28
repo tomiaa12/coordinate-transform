@@ -10,6 +10,7 @@ export const config: UserConfigExport = {
       entryRoot: "src", // 入口，不配置会生成嵌套根目录的文件
       outDir: "es", // 输出
       insertTypesEntry: true,
+      exclude: ['index.test.ts']
     }),
   ],
   // 打包为库
@@ -24,7 +25,7 @@ export const config: UserConfigExport = {
     rollupOptions: {
       input: ["src/index.ts"],
       // 确保外部化处理那些你不想打包进库的依赖
-      external: [],
+      external: ["proj4", "projzh"],
       output: [
         {
           format: "es", // es6 模块

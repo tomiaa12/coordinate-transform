@@ -17,5 +17,5 @@
     "noImplicitAny": true
   },
   "include": ["**/*.ts", "**/*.d.ts"],
-  "exclude": ["es", "lib", "node_modules", "./changelog.ts"]
+  "exclude": ["es", "lib", "node_modules", "./changelog.ts", "*.test.ts"]
 }
