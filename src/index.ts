@@ -156,3 +156,14 @@ export const GCJ022CGC2000: Transform = coord => WSG842CGCS2000(GCJ022WSG84(coor
  * 天地图（EPSG:4490）=> 火星坐标（GCJ02）
  */
 export const CGCS20002GCJ02: Transform = coord => WSG842GCJ02(CGCS20002WSG84(coord))
+
+/* 百度墨卡托 <==> 天地图（EPSG:4490）*/
+/**
+ * 百度墨卡托 => 天地图（EPSG:4490）
+ */
+export const baiduMercator2CGC2000: Transform = coord => WSG842CGCS2000(baiduMercator2WSG84(coord))
+
+/**
+ * 天地图（EPSG:4490）=> 百度墨卡托
+ */
+export const CGCS20002BaiduMercator: Transform = coord => WSG842BaiduMercator(CGCS20002WSG84(coord))

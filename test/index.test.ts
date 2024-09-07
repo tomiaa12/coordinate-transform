@@ -26,6 +26,8 @@ import {
   CGCS20002BD09,
   GCJ022CGC2000,
   CGCS20002GCJ02,
+  baiduMercator2CGC2000,
+  CGCS20002BaiduMercator,
 } from "../src"
 
 /* 墨卡托 <==> 地球坐标 */
@@ -133,4 +135,12 @@ test("GCJ022CGC2000", () => {
 })
 test("CGCS20002GCJ02", () => {
   expect(CGCS20002GCJ02([111.99451847531354, 27.003395847376037])).toStrictEqual([111.99998273805113,26.99998428893099])
+})
+
+/* 百度墨卡托 <==> 天地图（EPSG:4490）*/
+test("baiduMercator2CGC2000", () => {
+  expect(baiduMercator2CGC2000([12579296.458857015,3226625.524924728])).toStrictEqual([112.98833379720992,27.98080302631012])
+})
+test("CGCS20002BaiduMercator", () => {
+  expect(CGCS20002BaiduMercator([112.98833379720992,27.98080302631012])).toStrictEqual([12579294.239694642,3226623.2059235233,])
 })
